@@ -27,8 +27,8 @@ function RootLayout({ children }) {
         className={`${josefin.className} bg-primary-950 antialiased text-gray-100 min-h-screen flex flex-col relative`}
       >
         <Header />
-        <div className="flex-1 px-8 py-12 grid">
-          <main className="max-w-7xl mx-auto w-full ">{children}</main>
+        <div className="flex-1 px-8  grid">
+          <main className="max-w-7xl mx-auto w-full pt-16">{children}</main>
         </div>
       </body>
     </html>

@@ -3,6 +3,9 @@ import Link from 'next/link';
 import about_1 from '@/public/about-1.jpg';
 import about_2 from '@/public/about-2.jpg';
 import Image from 'next/image';
+import { getCabins } from '../_lib/data-service';
+
+export const revalidate = 86400;
 
 export const metadata = {
   title: 'About',
@@ -10,7 +13,9 @@ export const metadata = {
     'The Wild Oasis is a beautiful retreat located in the heart of the Italian Dolomites. Our mission is to provide a peaceful and relaxing environment for our guests. We offer a variety of activities, including hiking, fishing, and bird watching. Our cabins are the perfect place to unwind after a day of exploring the great outdoors.',
 };
 
-export default function Page() {
+export default async function Page() {
+  const cabins = await getCabins();
+  const noOfCabins = cabins.length;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-12 gap-y-16 text-xs sm:text-sm md:text-lg items-center px-4 sm:px-8">
       {/* Welcome Section */}
@@ -28,10 +33,10 @@ export default function Page() {
             simple pleasures with family.
           </p>
           <p>
-            Our 8 luxury cabins provide a cozy base, but the real freedom and
-            peace you'll find in the surrounding mountains. Wander through lush
-            forests, breathe in the fresh air, and watch the stars twinkle above
-            from the warmth of a campfire or your hot tub.
+            Our {noOfCabins} luxury cabins provide a cozy base, but the real
+            freedom and peace you'll find in the surrounding mountains. Wander
+            through lush forests, breathe in the fresh air, and watch the stars
+            twinkle above from the warmth of a campfire or your hot tub.
           </p>
           <p>
             This is where memorable moments are made, surrounded by nature's
