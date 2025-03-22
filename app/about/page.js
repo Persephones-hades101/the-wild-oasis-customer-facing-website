@@ -7,7 +7,7 @@ import Image from 'next/image';
 export const metadata = {
   title: 'About',
   description:
-    'The Wild Oasis is a beautiful retreat located in the heart of the wilderness. Our mission is to provide a peaceful and relaxing environment for our guests. We offer a variety of activities, including hiking, fishing, and bird watching. Our cabins are the perfect place to unwind after a day of exploring the great outdoors.',
+    'The Wild Oasis is a beautiful retreat located in the heart of the Italian Dolomites. Our mission is to provide a peaceful and relaxing environment for our guests. We offer a variety of activities, including hiking, fishing, and bird watching. Our cabins are the perfect place to unwind after a day of exploring the great outdoors.',
 };
 
 export default function Page() {
