@@ -2,18 +2,13 @@ import { getCabin } from '@/app/_lib/data-service';
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
-// PLACEHOLDER DATA
-const cabin = {
-  id: 89,
-  name: '001',
-  maxCapacity: 2,
-  regularPrice: 250,
-  discount: 0,
-  description:
-    'Discover the ultimate luxury getaway for couples in the cozy wooden cabin 001. Nestled in a picturesque forest, this stunning cabin offers a secluded and intimate retreat. Inside, enjoy modern high-quality wood interiors, a comfortable seating area, a fireplace and a fully-equipped kitchen. The plush king-size bed, dressed in fine linens guarantees a peaceful nights sleep. Relax in the spa-like shower and unwind on the private deck with hot tub.',
-  image:
-    'https://dclaevazetcjjkrzczpc.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg',
-};
+export async function generateMetadata({ params }) {
+  const { name, description } = await getCabin(params.cabinId);
+  return {
+    title: `Cabin ${name}`,
+    description: description,
+  };
+}
 
 export default async function Page({ params }) {
   // console.log(params.cabinId);
@@ -45,14 +40,14 @@ export default async function Page({ params }) {
             <li className="flex gap-3 items-center">
               <UsersIcon className="h-5 w-5 text-primary-600" />
               <span className="text-lg">
-                For up to <span className="font-bold">{maxCapacity}</span>{' '}
+                For up to <span className="font-bold">{maxCapacity}</span>
                 guests
               </span>
             </li>
             <li className="flex gap-3 items-center">
               <MapPinIcon className="h-5 w-5 text-primary-600" />
               <span className="text-lg">
-                Located in the heart of the{' '}
+                Located in the heart of the
                 <span className="font-bold">Dolomites</span> (Italy)
               </span>
             </li>
