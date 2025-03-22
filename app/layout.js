@@ -24,7 +24,7 @@ function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-auto scrollbar-hidden">
       <body
-        className={`${josefin.className} bg-primary-950 antialiased text-gray-100 min-h-screen-dvh flex flex-col relative`}
+        className={`${josefin.className} bg-primary-950 antialiased text-gray-100 min-h-screen flex flex-col relative`}
       >
         <Header />
         <div className="flex-1 px-8 py-12 grid">

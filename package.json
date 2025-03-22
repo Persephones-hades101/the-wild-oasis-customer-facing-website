@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@supabase/supabase-js": "^2.49.1",
     "date-fns": "^4.1.0",
     "next": "14.2.25",
     "react": "^18",
