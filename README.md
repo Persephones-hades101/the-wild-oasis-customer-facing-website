@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Wild Oasis - Customer Facing Website
 
-## Getting Started
+## 🌿 Overview
 
-First, run the development server:
+The **Wild Oasis Customer-Facing Website** is a platform designed for potential
+and actual guests of the Wild Oasis Hotel. Guests can explore cabin details,
+check availability, make reservations, and manage their bookings with ease.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🏨 **Hotel & Cabin Information**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Guests can **learn all about the Wild Oasis Hotel**.
+- Detailed descriptions and images of each cabin.
+- Ability to see booked dates for each cabin.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 🔎 **Cabin Filtering & Availability**
 
-## Learn More
+- Guests can **filter cabins** by their maximum guest capacity.
+- View available cabins for specific date ranges.
 
-To learn more about Next.js, take a look at the following resources:
+### 🛏 **Reservation System**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Guests can **reserve a cabin** for a specific date range.
+- **Reservations are not paid online**; payment is done upon arrival.
+- New reservations are initially marked as **"unconfirmed"** until check-in.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 📅 **Booking Management**
 
-## Deploy on Vercel
+- Guests can **view all past and future reservations**.
+- Ability to **update or delete reservations**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔐 **User Authentication & Profiles**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Guests must **sign up and log in** before making a reservation.
+- Each guest receives a **profile in the database** upon signup.
+- Guests can **set and update basic profile data** to streamline check-in.
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js
+- **Backend:** Supabase (PostgreSQL, Authentication, Storage)
+- **Styling:** Tailwind CSS
+- **Authentication:** Auth.js
+- **State Management:** Context API for minimal global state management
+- **Date Handling:** Date-fns
+
+## 📸 Screenshots
+
+![Dashboard Screenshot](./public/screenshots/img-1.png)
+![Dashboard Screenshot](./public/screenshots/img-2.png)
+![Dashboard Screenshot](./public/screenshots/img-3.png)
+
+## 📞 Contact
+
+For any queries, reach out to [sudh4800@gmail.com].
+
+## License
+
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+This project is licensed under the [MIT License](./LICENSE).
