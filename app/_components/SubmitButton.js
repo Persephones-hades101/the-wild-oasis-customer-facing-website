@@ -2,7 +2,7 @@
 
 import { useFormStatus } from 'react-dom';
 
-export default function SubmitButton({ resource }) {
+export default function SubmitButton({ label, pendingLabel }) {
   const { pending } = useFormStatus();
 
   return (
@@ -11,7 +11,7 @@ export default function SubmitButton({ resource }) {
         disabled={pending}
         className="bg-accent-500 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-primary-800 font-semibold rounded-md hover:bg-accent-600 transition-all disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300"
       >
-        {pending ? 'Updating...' : `Update ${resource}`}
+        {pending ? pendingLabel : label}
       </button>
     </div>
   );

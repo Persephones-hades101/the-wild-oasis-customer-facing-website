@@ -50,7 +50,10 @@ export default async function Page({ params }) {
           />
         </div>
         <input type="hidden" name="bookingId" value={bookingId} />
-        <SubmitButton resource={'reservation'} />
+        <SubmitButton
+          label={'Update reservation'}
+          pendingLabel={'Updating...'}
+        />
       </form>
     </div>
   );

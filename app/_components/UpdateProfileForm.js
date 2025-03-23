@@ -56,7 +56,7 @@ export default function UpdateProfileForm({ guest, children }) {
         />
       </div>
 
-      <SubmitButton resource={'profile'} />
+      <SubmitButton label={'Update profile'} pendingLabel={'Updating...'} />
     </form>
   );
 }
