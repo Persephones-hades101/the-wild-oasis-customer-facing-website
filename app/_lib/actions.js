@@ -75,6 +75,7 @@ export async function deleteBooking(bookingId) {
 
 export async function updateBooking(formData) {
   const bookingId = Number(formData.get('bookingId'));
+  console.log('bookingId', bookingId);
 
   // 1) Authentication
   const session = await auth();
